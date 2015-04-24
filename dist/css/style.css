@@ -391,13 +391,28 @@ http://codepen.io/bradfrost/pen/sHvaz
 }
 /*
 
+--- Kontejner pro obsah stranky ---
+
+*/
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+/*
+
 --- Hlavni obsah stranky ---
 
 */
 .content {
   margin-bottom: 48px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 @media only screen and (min-width: 800px) {
   .content {
@@ -412,8 +427,6 @@ http://codepen.io/bradfrost/pen/sHvaz
 */
 .side {
   margin-bottom: 48px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 @media only screen and (min-width: 800px) {
   .side {

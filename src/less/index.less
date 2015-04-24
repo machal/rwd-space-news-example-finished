@@ -21,10 +21,11 @@
 @import "components/similar-articles";
 @import "components/toggle-nav";
 
+@import "layout/container";
 @import "layout/content";
 @import "layout/side";
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: @layout-start) {
   @import "layout/layout";
 }
 
