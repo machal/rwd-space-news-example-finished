@@ -43,6 +43,11 @@ module.exports = function(grunt) {
           },
         ]
       },
+      respond: {
+        files: {
+          'dist/js/lib/respond.min.js': 'node_modules/respond.js/dest/respond.min.js'
+        }
+      }
     },
 
     // CSS
