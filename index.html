@@ -83,7 +83,12 @@
         </p>
 
         <p class="photo">
-          <img src="dist/img/content/orion_1.jpg" alt="Orion" width="1600" height="899">
+          <img alt="Orion" width="1600" height="899"
+            srcset="dist/img/content/orion_1.jpg 1600w,
+              dist/img/content/orion_1_m.jpg 1024w,
+              dist/img/content/orion_1_s.jpg 600w"
+            sizes="(min-width: 800px) calc((100vw - 2*15px)*0.66),
+              calc(100vw - 2*15px)">
         </p>
 
 
