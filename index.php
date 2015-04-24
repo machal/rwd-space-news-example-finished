@@ -11,15 +11,18 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>
-        // document.no-js -> document.js
-        document.documentElement.className =
-           document.documentElement.className.replace("no-js","js");
-        // Picture element HTML5 shiv
-        document.createElement( "picture" );
-    </script>
+    <meta name="fullcss" content="dist/css/style.min.css">
+    <meta name="fulljs" content="dist/js/script.js">
 
-    <link rel="stylesheet" href="dist/css/style.css">
+    <script>
+      // document.no-js -> document.js
+      document.documentElement.className =
+         document.documentElement.className.replace("no-js","js");
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script>/* enhance.min.js */<?php include('dist/js/lib/enhance.min.js') ?></script>
+    <noscript><link rel="stylesheet" href="dist/css/style.min.css"></noscript>
     <script src="dist/js/lib/respond.min.js"></script>
     <script src="dist/js/lib/picturefill.min.js"></script>
 
@@ -329,8 +332,6 @@
       }
     }
     </script>
-
-    <script src="dist/js/script.js"></script>
 
   </body>
 

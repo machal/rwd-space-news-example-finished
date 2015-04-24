@@ -152,6 +152,10 @@ module.exports = function(grunt) {
       script: {
           src: 'dist/js/script.js',
           dest: 'dist/js/script.min.js'
+      },
+      enhance: {
+          src: 'src/js/lib/enhance.js',
+          dest: 'dist/js/lib/enhance.min.js'
       }
     },
 
