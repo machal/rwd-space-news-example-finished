@@ -111,6 +111,11 @@ module.exports = function(grunt) {
     // by to efektivnější než minifikovat LESSem.
 
     cssmin: {
+      css: {
+        files: {
+          'dist/css/style.min.css': 'dist/css/style.css'
+        }
+      },
       inline_css: {
           files: [{
             expand: true,
