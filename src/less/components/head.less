@@ -9,11 +9,14 @@
 .head {
   .clearfix;
 	background:
+    @color-dark
 		url('../img/bitmap/head_aurora_medium.jpg')
 		no-repeat center center;
 	background-size: cover;
 	padding: @line-height-base @gutter;
 }
+
+
 
 // Logotyp
 
@@ -29,7 +32,7 @@
   display: inline-block;
   float: right;
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: @full-nav-start) {
     display: none;
   }
 }

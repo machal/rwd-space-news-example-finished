@@ -222,7 +222,7 @@ th img {
 
 */
 .head {
-  background: url('../img/bitmap/head_aurora_medium.jpg') no-repeat center center;
+  background: #2f2222 url('../img/bitmap/head_aurora_medium.jpg') no-repeat center center;
   background-size: cover;
   padding: 24px 15px;
 }
@@ -275,12 +275,6 @@ th img {
     display: none;
   }
 }
-@media only screen and (max-width: 599px) {
-  .nav {
-    height: 0;
-    overflow: hidden;
-  }
-}
 .nav-item {
   display: block;
   border-bottom: 1px solid #fff;
@@ -300,6 +294,15 @@ b .nav-item,
 }
 .nav li:last-child .nav-item {
   border-bottom: none;
+}
+.nav .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media only screen and (max-width: 599px) {
+  .nav {
+    display: none;
+  }
 }
 @media only screen and (min-width: 600px) {
   .nav li {
@@ -442,6 +445,7 @@ http://codepen.io/bradfrost/pen/sHvaz
 
 */
 .content {
+  margin-top: 24px;
   margin-bottom: 48px;
 }
 @media only screen and (min-width: 800px) {
