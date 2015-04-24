@@ -4,18 +4,16 @@
 
 */
 
+@content-width: 540px;
+
 .gallery {
   .clearfix;
 }
 
 .gallery-item {
 	float: left;
-	width: 170px;
-	margin: 0 15px 15px 0;
-}
-
-.gallery-item img {
-	width: 170px;
+	width: percentage(170px / @content-width);
+	margin: 0 percentage(15px / @content-width) 15px 0;
 }
 
 .gallery-item a {
