@@ -47,7 +47,12 @@ module.exports = function(grunt) {
         files: {
           'dist/js/lib/respond.min.js': 'node_modules/respond.js/dest/respond.min.js'
         }
-      }
+      },
+      picturefill: {
+        files: {
+          'dist/js/lib/picturefill.min.js': 'node_modules/picturefill/dist/picturefill.min.js'
+        }
+      },
     },
 
     // CSS
