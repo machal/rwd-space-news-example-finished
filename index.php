@@ -14,17 +14,24 @@
     <meta name="fullcss" content="dist/css/style.min.css">
     <meta name="fulljs" content="dist/js/script.js">
 
+    <style>
+      /* style.critical.min.js */
+      <?php include('dist/css/critical-style.min.css') ?>
+    </style>
     <script>
       // document.no-js -> document.js
       document.documentElement.className =
          document.documentElement.className.replace("no-js","js");
       // Picture element HTML5 shiv
       document.createElement( "picture" );
+      <?php include('dist/js/lib/respond.min.js') ?>
+      <?php include('dist/js/lib/picturefill.min.js') ?>
     </script>
-    <script>/* enhance.min.js */<?php include('dist/js/lib/enhance.min.js') ?></script>
+    <script>
+      /* enhance.min.js */
+      <?php include('dist/js/lib/enhance.min.js') ?>
+    </script>
     <noscript><link rel="stylesheet" href="dist/css/style.min.css"></noscript>
-    <script src="dist/js/lib/respond.min.js"></script>
-    <script src="dist/js/lib/picturefill.min.js"></script>
 
   </head>
 

@@ -121,14 +121,29 @@ module.exports = function(grunt) {
           'dist/css/style.min.css': 'dist/css/style.css'
         }
       },
-      inline_css: {
-          files: [{
-            expand: true,
-            cwd: 'dist/css/critical/',
-            src: ['*.css', '!*.min.css'],
-            dest: 'dist/css/critical/',
-            ext: '.min.css'
-          }]
+      critical: {
+        files: {
+          'dist/css/critical-style.min.css': 'dist/css/critical-style.css'
+        }
+      }
+    },
+
+    // CriticalCSS
+    // -----------
+
+    // Vytahuje část CSS nad zlomem pro potřeby inlinování.
+
+    criticalcss: {
+        custom: {
+            options: {
+                url: "http://localhost:3000/skoleni/2015_04_28_rwd_pok/",
+                width: 1200,
+                height: 900,
+                outputfile: "dist/css/critical-style.css",
+                filename: "dist/css/style.css",
+                buffer: 800*1024,
+                ignoreConsole: false
+            }
         }
     },
 
@@ -264,6 +279,7 @@ module.exports = function(grunt) {
   // ==============
 
   grunt.registerTask('css', ['less:default', 'autoprefixer']);
+  grunt.registerTask('critical', ['criticalcss', 'cssmin:critical']);
   grunt.registerTask('img', ['imagemin', 'svg2png']);
   grunt.registerTask('js', ['browserify', 'uglify']);
   grunt.registerTask('default', ['copy:fancybox', 'css', 'js', 'browserSync', 'watch']);
