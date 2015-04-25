@@ -31,33 +31,42 @@
 
       // Inlining Critical JS
 
-      <?php include('dist/js/lib/respond.min.js') ?>
       <?php include('dist/js/lib/picturefill.min.js') ?>
-      <?php include('dist/js/lib/fontfaceobserver.min.js') ?>
 
       // Font Face Observer Setup
+      // (nepoustime k IE8)
 
-      var vollkorn = new FontFaceObserver("Vollkorn", {});
-      var exo = new FontFaceObserver("Exo", {});
+      if (!(document.all && !document.addEventListener)) {
+        <?php include('dist/js/lib/fontfaceobserver.min.js') ?>
 
-      // Drzi fallback font 10s a pak nacte webfont nebo "preda" nacitani browseru
-      Promise.all([
-        vollkorn.check(null, 10000)
-      ]).then(function() {
-        document.documentElement.className += " vollkorn-font-loaded";
-      }, function() {
-        document.documentElement.className += " vollkorn-font-browser-loading";
-      });
-      Promise.all([
-        exo.check(null, 10000)
-      ]).then(function() {
-        document.documentElement.className += " exo-font-loaded";
-      }, function() {
-        document.documentElement.className += " exo-font-browser-loading";
-      });
+        var vollkorn = new FontFaceObserver("Vollkorn", {});
+        var exo = new FontFaceObserver("Exo", {});
+
+        // Drzi fallback font 10s a pak nacte webfont nebo "preda" nacitani browseru
+        Promise.all([
+          vollkorn.check(null, 10000)
+        ]).then(function() {
+          document.documentElement.className += " vollkorn-font-loaded";
+        }, function() {
+          document.documentElement.className += " vollkorn-font-browser-loading";
+        });
+        Promise.all([
+          exo.check(null, 10000)
+        ]).then(function() {
+          document.documentElement.className += " exo-font-loaded";
+        }, function() {
+          document.documentElement.className += " exo-font-browser-loading";
+        });
+
+      }
 
       // Enhance
+
       <?php include('dist/js/lib/enhance.min.js') ?>
+
+      // Respond
+
+      <?php include('dist/js/lib/respond.min.js') ?>
     </script>
 
     <noscript><link rel="stylesheet" href="dist/css/style.min.css"></noscript>
