@@ -147,6 +147,7 @@ Zmensujeme se zachovanim pomeru stran
   height: 100%;
 }
 .content img {
+  width: inherit;
   max-width: 100%;
   height: auto;
 }
