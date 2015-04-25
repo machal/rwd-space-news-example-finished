@@ -53,6 +53,11 @@ module.exports = function(grunt) {
           'dist/js/lib/picturefill.min.js': 'node_modules/picturefill/dist/picturefill.min.js'
         }
       },
+      fontfaceobserver: {
+        files: {
+          'dist/js/lib/fontfaceobserver.min.js': 'node_modules/fontfaceobserver/fontfaceobserver.standalone.js'
+        }
+      },
     },
 
     // CSS
@@ -278,7 +283,7 @@ module.exports = function(grunt) {
   // 5) Alias tasky
   // ==============
 
-  grunt.registerTask('css', ['less:default', 'autoprefixer']);
+  grunt.registerTask('css', ['less:default', 'autoprefixer', 'cssmin']);
   grunt.registerTask('critical', ['criticalcss', 'cssmin:critical']);
   grunt.registerTask('img', ['imagemin', 'svg2png']);
   grunt.registerTask('js', ['browserify', 'uglify']);

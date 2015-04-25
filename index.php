@@ -1,6 +1,6 @@
 <!doctype html>
-<!--[if lt IE 9]><html lang="cs" class="old-ie"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="cs"><!--<![endif]-->
+<!--[if lt IE 9]><html lang="cs" class="old-ie no-js"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="cs" class="no-js"><!--<![endif]-->
 
   <head>
     <meta charset="UTF-8">
@@ -19,18 +19,47 @@
       <?php include('dist/css/critical-style.min.css') ?>
     </style>
     <script>
+
       // document.no-js -> document.js
+
       document.documentElement.className =
          document.documentElement.className.replace("no-js","js");
+
       // Picture element HTML5 shiv
+
       document.createElement( "picture" );
+
+      // Inlining Critical JS
+
       <?php include('dist/js/lib/respond.min.js') ?>
       <?php include('dist/js/lib/picturefill.min.js') ?>
-    </script>
-    <script>
-      /* enhance.min.js */
+      <?php include('dist/js/lib/fontfaceobserver.min.js') ?>
+
+      // Font Face Observer Setup
+
+      var vollkorn = new FontFaceObserver("Vollkorn", {});
+      var exo = new FontFaceObserver("Exo", {});
+
+      // Drzi fallback font 10s a pak nacte webfont nebo "preda" nacitani browseru
+      Promise.all([
+        vollkorn.check(null, 10000)
+      ]).then(function() {
+        document.documentElement.className += " vollkorn-font-loaded";
+      }, function() {
+        document.documentElement.className += " vollkorn-font-browser-loading";
+      });
+      Promise.all([
+        exo.check(null, 10000)
+      ]).then(function() {
+        document.documentElement.className += " exo-font-loaded";
+      }, function() {
+        document.documentElement.className += " exo-font-browser-loading";
+      });
+
+      // Enhance
       <?php include('dist/js/lib/enhance.min.js') ?>
     </script>
+
     <noscript><link rel="stylesheet" href="dist/css/style.min.css"></noscript>
 
   </head>
