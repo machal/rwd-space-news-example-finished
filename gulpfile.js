@@ -80,9 +80,10 @@ gulp.task('uglify', function () {
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        server: {
-            baseDir: "./"
-        }
+      // TODO zmenit podle sveho
+      // nebo pouzit server a `baseDir`
+      // http://www.browsersync.io/docs/gulp/
+      proxy: "sites.localhost"
     });
 });
 
