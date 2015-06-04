@@ -236,6 +236,41 @@ module.exports = function(grunt) {
       }
     },
 
+    // responsive_images: vyroba zmensenin obrazku
+    // -------------------------------------------
+
+    responsive_images: {
+      options: {
+        sizes: [
+        {
+          name: "small",
+          suffix: "_s",
+          width: 600,
+          height: 337
+        },
+        {
+          name: "medium",
+          suffix: "_m",
+          width: 1024,
+          height: 575
+        },
+        {
+          name: "large",
+          suffix: "_l",
+          width: 1600,
+          height: 889
+        }
+        ]
+      },
+      files: {
+        expand: true,
+        src: ['**.jpg'],
+        cwd: 'src/img/content/',
+        dest: 'dest/img/content/'
+      },
+    },
+
+
     // 4) browserSync a watch
     // ======================
 
