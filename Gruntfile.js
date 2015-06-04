@@ -58,6 +58,11 @@ module.exports = function(grunt) {
           'dist/js/lib/fontfaceobserver.min.js': 'node_modules/fontfaceobserver/fontfaceobserver.standalone.js'
         }
       },
+      ajaxInclude: {
+        files: {
+          'dist/js/lib/ajaxinclude.min.js': 'node_modules/ajaxInclude/dist/ajaxInclude.min.js'
+        }
+      },
     },
 
     // CSS
