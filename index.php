@@ -132,11 +132,15 @@
 
         <p class="photo">
           <img alt="Orion" width="1600" height="899"
-            srcset="dist/img/content/orion_1.jpg 1600w,
-              dist/img/content/orion_1_m.jpg 1024w,
-              dist/img/content/orion_1_s.jpg 600w"
-            sizes="(min-width: 800px) calc((100vw - 2*15px)*0.66),
-              calc(100vw - 2*15px)">
+            srcset="
+              dist/img/content/orion_1-large.jpg 1600w,
+              dist/img/content/orion_1-medium.jpg 1024w,
+              dist/img/content/orion_1-small.jpg 400w
+            "
+            sizes="
+              (min-width: 800px) calc((100vw - 2*15px)*0.66),
+              calc(100vw - 2*15px)
+            ">
         </p>
 
 
@@ -169,33 +173,33 @@
           <h2>Fotogalerie</h2>
 
           <p class="gallery-item">
-            <a class="fancybox" href="dist/img/content/orion_3.jpg">
-              <img src="dist/img/content/orion_3_s.jpg" alt="Orion" width="600" height="338">
+            <a class="fancybox" href="dist/img/content/orion_3-large.jpg">
+              <img src="dist/img/content/orion_3-small.jpg" alt="Orion" width="600" height="338">
             </a>
           </p>
           <p class="gallery-item">
-            <a class="fancybox" href="dist/img/content/orion_4.jpg">
-              <img src="dist/img/content/orion_4_s.jpg" alt="Orion" width="600" height="338">
+            <a class="fancybox" href="dist/img/content/orion_4-large.jpg">
+              <img src="dist/img/content/orion_4-small.jpg" alt="Orion" width="600" height="338">
             </a>
           </p>
           <p class="gallery-item last">
-            <a class="fancybox" href="dist/img/content/orion_5.jpg">
-              <img src="dist/img/content/orion_5_s.jpg" alt="Orion" width="600" height="338">
+            <a class="fancybox" href="dist/img/content/orion_5-large.jpg">
+              <img src="dist/img/content/orion_5-small.jpg" alt="Orion" width="600" height="338">
             </a>
           </p>
           <p class="gallery-item">
-            <a class="fancybox" href="dist/img/content/orion_6.jpg">
-              <img src="dist/img/content/orion_6_s.jpg" alt="Orion" width="600" height="338">
+            <a class="fancybox" href="dist/img/content/orion_6-large.jpg">
+              <img src="dist/img/content/orion_6-small.jpg" alt="Orion" width="600" height="338">
             </a>
           </p>
           <p class="gallery-item">
-            <a class="fancybox" href="dist/img/content/orion_7.jpg">
-              <img src="dist/img/content/orion_7_s.jpg" alt="Orion" width="600" height="338">
+            <a class="fancybox" href="dist/img/content/orion_7-large.jpg">
+              <img src="dist/img/content/orion_7-small.jpg" alt="Orion" width="600" height="338">
             </a>
           </p>
           <p class="gallery-item last">
-            <a class="fancybox" href="dist/img/content/orion_8.jpg">
-              <img src="dist/img/content/orion_8_s.jpg" alt="Orion" width="600" height="338">
+            <a class="fancybox" href="dist/img/content/orion_8-large.jpg">
+              <img src="dist/img/content/orion_8-small.jpg" alt="Orion" width="600" height="338">
             </a>
           </p>
         </div>
@@ -237,7 +241,7 @@
               </a>
             </h3>
             <p class="similar-article-image">
-              <a href="#http://technet.idnes.cz/orion-posle-raketoplany-do-srotu-a-otevre-novou-etapu-v-dobyvani-vesmiru-1r1-/tec_vesmir.aspx?c=A061120_170632_tec_vesmir_vse"><img src="dist/img/content/similar_1.jpg" width="600" alt="Orion pošle raketoplány do šrotu a otevře novou etapu v dobývání vesmíru"></a>
+              <a href="#http://technet.idnes.cz/orion-posle-raketoplany-do-srotu-a-otevre-novou-etapu-v-dobyvani-vesmiru-1r1-/tec_vesmir.aspx?c=A061120_170632_tec_vesmir_vse"><img src="dist/img/content/similar_1-small.jpg" width="600" alt="Orion pošle raketoplány do šrotu a otevře novou etapu v dobývání vesmíru"></a>
             </p>
             <p>
               Američtí astronauté budou po plánovaném ukončení provozu raketoplánů v roce 2010 využívat ke svým letům na Mezinárodní kosmickou stanici (ISS) a na Měsíc zcela nový a bezpečnější vesmírný výzkumný prostředek Orion.
@@ -250,7 +254,7 @@
               </a>
             </h3>
             <p class="similar-article-image">
-              <a href="#http://technet.idnes.cz/na-mesic-a-mars-poleti-lide-v-orionu-du6-/tec_vesmir.aspx?c=A060824_150527_tec_checktech_NYV"><img src="dist/img/content/similar_2.jpg" width="600" alt="Na Měsíc a Mars poletí lidé v Orionu"></a>
+              <a href="#http://technet.idnes.cz/na-mesic-a-mars-poleti-lide-v-orionu-du6-/tec_vesmir.aspx?c=A060824_150527_tec_checktech_NYV"><img src="dist/img/content/similar_2-small.jpg" width="600" alt="Na Měsíc a Mars poletí lidé v Orionu"></a>
             </p>
             <p>
               Vesmírné výzkumné vozidlo, ve kterém poletí lidská posádka nejprve na Měsíc a poté i na Mars, se bude jmenovat Orion.
@@ -263,7 +267,7 @@
               </a>
             </h3>
             <p class="similar-article-image">
-              <a href="#http://technet.idnes.cz/vedecky-sloupek-jana-kolare-o-projektu-orion-f39-/tec_vesmir.aspx?c=A130122_160933_tec_vesmir_mla"><img src="dist/img/content/similar_3.jpg" width="600" alt="Evropa se bude podílet na vývoji nové kosmické lodě NASA. Bez Čechů"></a>
+              <a href="#http://technet.idnes.cz/vedecky-sloupek-jana-kolare-o-projektu-orion-f39-/tec_vesmir.aspx?c=A130122_160933_tec_vesmir_mla"><img src="dist/img/content/similar_3-small.jpg" width="600" alt="Evropa se bude podílet na vývoji nové kosmické lodě NASA. Bez Čechů"></a>
             </p>
             <p>
               Evropané se budou poprvé účastnit vývoje kosmického prostředku pro lidskou posádku. Bude s USA pracovat na vývoji lodě Orion. Zaplatí tak za používání stanice ISS.
