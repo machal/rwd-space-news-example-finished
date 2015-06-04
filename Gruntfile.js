@@ -170,11 +170,25 @@ module.exports = function(grunt) {
       }
     },
 
+    // Concat: spojovani JS
+    // --------------------
+
+    concat: {
+      mainJS: {
+          src: [
+            'node_modules/jquery/dist/jquery.js',
+            'node_modules/fancybox/dist/js/jquery.fancybox.js',
+            'node_modules/ajaxInclude/dist/ajaxInclude.js'
+          ],
+          dest: 'dist/js/script.js'
+      },
+    },
+
     // Uglify: minifikace JS
     // ---------------------
 
     uglify: {
-      script: {
+      mainJS: {
           src: 'dist/js/script.js',
           dest: 'dist/js/script.min.js'
       },
@@ -324,7 +338,7 @@ module.exports = function(grunt) {
   grunt.registerTask('css', ['less:default', 'autoprefixer', 'cssmin']);
   grunt.registerTask('critical', ['criticalcss', 'cssmin:critical']);
   grunt.registerTask('img', ['imagemin', 'svg2png']);
-  grunt.registerTask('js', ['browserify', 'uglify']);
+  grunt.registerTask('js', ['concat', 'uglify']);
   grunt.registerTask('default', ['copy:fancybox', 'css', 'js', 'browserSync', 'watch']);
 
 };
