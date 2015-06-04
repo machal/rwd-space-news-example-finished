@@ -236,29 +236,27 @@ module.exports = function(grunt) {
       }
     },
 
-    // responsive_images: vyroba zmensenin obrazku
-    // -------------------------------------------
+    // responsive_images
+    // -----------------
+    // Vyroba zmensenin obrazku po potreby <img srcset>.
 
     responsive_images: {
       options: {
         sizes: [
         {
           name: "small",
-          suffix: "_s",
-          width: 600,
-          height: 337
+          width: 400,
+          height: 225
         },
         {
           name: "medium",
-          suffix: "_m",
           width: 1024,
-          height: 575
+          height: 576
         },
         {
           name: "large",
-          suffix: "_l",
           width: 1600,
-          height: 889
+          height: 900
         }
         ]
       },
@@ -266,7 +264,7 @@ module.exports = function(grunt) {
         expand: true,
         src: ['**.jpg'],
         cwd: 'src/img/content/',
-        dest: 'dest/img/content/'
+        dest: 'dist/img/content/'
       },
     },
 
